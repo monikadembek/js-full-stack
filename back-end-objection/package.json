@@ -1,0 +1,28 @@
+{
+  "name": "backend-objection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "query:restaurants": "node test-queries/restaurants.query.js",
+    "query:orders": "node test-queries/orders.query.js",
+    "query:orders-info": "node test-queries/orders-complete-info.query.js",
+    "mutation:remove-restaurant": "node test-queries/remove-restaurant.mutation.js",
+    "migrate": "env-cmd knex migrate:latest",
+    "rollback": "env-cmd knex migrate:rollback",
+    "seed": "env-cmd knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "env-cmd": "^10.1.0",
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "objection": "^3.0.1",
+    "sqlite3": "^5.1.2"
+  },
+  "type": "module"
+}
